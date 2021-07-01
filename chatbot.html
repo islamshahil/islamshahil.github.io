@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chatApp">
+    <head>
+            <title>Shahil</title>
+            <link rel="icon" href="images/favicon.ico">
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+            <link rel="stylesheet" href="assets/css/main.css" />
+			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+
+			<!--css-->
+			<style type="text/css">
+				.fixed-panel {
+					min-height: 400px;
+					max-height: 400px;
+					background-color: #19313c;
+					color: white;
+					overflow: auto;
+				}
+				.media-list {
+					overflow: auto;
+					clear: both;
+					display: table;
+					overflow-wrap: break-word;
+					word-wrap: break-word;
+					word-break: normal;
+					line-break: strict;
+				}
+				.panel {
+					margin-bottom: 20px;
+					background-color: #fff;
+					border: 6px solid transparent;
+					border-radius: 25px;
+					-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+					box-shadow: 0 1px 1px rgba(0,0,0,.05);
+				}
+				.panel-info {
+					border-color: #0c2735;
+				}
+				.panel-info>.panel-heading {
+					color: white;
+					background-color: #0c2735;
+					border-color: #0c2735;
+				}
+				.panel-footer {
+					padding: 10px 15px;
+					background-color: #0c2735;
+					border-top: 1px solid #0c2735;
+					border-bottom-right-radius: 3px;
+					border-bottom-left-radius: 3px
+				}
+				body {
+					background: rgb(96,143,149); /* Old browsers */
+					background: -moz-linear-gradient(-45deg, rgba(96,143,149,1) 0%, rgba(0,133,136,1) 9%, rgba(12,36,73,1) 52%, rgba(26,30,59,1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(-45deg, rgba(96,143,149,1) 0%,rgba(0,133,136,1) 9%,rgba(12,36,73,1) 52%,rgba(26,30,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(135deg, rgba(96,143,149,1) 0%,rgba(0,133,136,1) 9%,rgba(12,36,73,1) 52%,rgba(26,30,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#608f95', endColorstr='#1a1e3b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+				}
+				</style>
+
+			
+    
+    
+    
+        </head>
+        <body class="is-loading" ng-controller="ChatController">
+    
+            <!-- Wrapper -->
+                <div id="wrapper">
+    
+                    <!-- Header -->
+                        <header id="header">
+                            <a href="index.html" class="logo">CHATBOT</a>
+                        </header>
+    
+                    <!-- Nav -->
+                        <nav id="nav">
+                            <ul class="links">
+                                <li><a href="index.html">This is shahil</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+								<li><a href="chat.html">Chat</a></li>
+								<li  class="active"><a href="chatbot.html">ChatBot</a></li>
+                            </ul>
+                            <ul class="icons">
+                                    <li><a href="https://twitter.com/islam_shahil" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://www.facebook.com/shahil.islam1" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                    <li><a href="https://www.instagram.com/islamshahil/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://github.com/islamshahil" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCFzT5d9pIvOBEmt075heEhA" target="_blank" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
+                            </ul>
+                        </nav>
+    
+                    <!-- Main -->
+                        <div id="main">
+    
+                            <!-- Post -->
+                                <section class="post">
+                                    <header class="major">
+
+
+
+
+											<div class="container">
+                                                    <div class="panel panel-primary">
+                                                
+															<div class="panel-heading">Artificial Intelligence Chat Bot</div>
+                                                        
+                                                        <div class="panel-body">
+
+                                                                &nbsp;
+
+                                                                <div id="chatPanel" style="border:1px solid black;width:100%;height:300px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+																		<div class="panel-heading">Talk with Me !!! (You: Green / Bot: White)</div>
+
+																		<div class="panel-body fixed-panel">
+																				<ul class="media-list">
+																				</ul>
+																			</div>
+
+
+                                                                </div>
+                                                                 
+                                                                &nbsp; 
+
+																   
+																<div class="form-group">
+																
+																<form method="post" id="chatbot-form">
+
+																			<div class="input-group">
+
+																					
+																				<input type="text" class="form-control" placeholder="Enter Message" name="messageText" id="messageText" autofocus/>
+																				
+																				<span class="input-group-btn">
+																					<button class="btn btn-info" type="button" id="chatbot-form-btn">SEND <span class="glyphicon glyphicon-pencil"></span></button>
+																					<button class="btn btn-info" type="button" id="chatbot-form-btn-clear">CLEAR <span class="glyphicon glyphicon-erase"></span></button>
+																				</span>
+
+																			</div>
+																		</form>
+
+                                                                </div>
+
+                                                            </div>
+                                                        
+                                                    </div>
+												</div>
+												
+
+												<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+        <!--js script-->
+        <script>
+        $(function() {
+            $('#chatbot-form-btn').click(function(e) {
+                e.preventDefault();
+                $('#chatbot-form').submit();
+            });
+            $('#chatbot-form-btn-clear').click(function(e) {
+                e.preventDefault();
+                $('#chatPanel').find('.media-list').html('');
+            });
+            $('#chatbot-form').submit(function(e) {
+                e.preventDefault();
+                var message = $('#messageText').val();
+                $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div style = "text-align:right; color : #2EFE2E" class="media-body">' + message + '<hr/></div></div></div></li>');
+
+                $.ajax({
+                    type: "POST",
+                    url: "/ask",
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#messageText').val('');
+                        var answer = response.answer;
+                        const chatPanel = document.getElementById("chatPanel");
+                        $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div style = "color : white" class="media-body">' + answer + '<hr/></div></div></div></li>');
+                        $(".fixed-panel").stop().animate({ scrollTop: $(".fixed-panel")[0].scrollHeight}, 1000);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+        </script>
+
+
+
+</header>
+</section>
+</div>
+<!-- Copyright -->
+                        <div id="copyright">
+                                <ul><li>&copy; Shahil</li><li>All Rights Reserved <a href="#">2018</a></li></ul>
+                        </div>
+    
+                </div>
+    
+            <!-- Scripts -->
+                <script src="assets/js/jquery.min.js"></script>
+                <script src="assets/js/jquery.scrollex.min.js"></script>
+                <script src="assets/js/jquery.scrolly.min.js"></script>
+                <script src="assets/js/skel.min.js"></script>
+                <script src="assets/js/util.js"></script>
+                <script src="assets/js/main.js"></script>
+                
+        </body>
+    </html>
