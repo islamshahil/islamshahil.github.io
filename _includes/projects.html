@@ -21,6 +21,15 @@
     {% unless site.projects.exclude.projects contains repository.name %}
       <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
         {% include repo-card.html %}
+                <br>
+        <br>
+        <div style = "position:relative; left:50px; top:2px;">
+          <ul>
+            <li><a href="https://github.com/islamshahil/AutonomousThreatSweep/tree/main/AKH_RAT_Loader">AKH_RAT_Loader</a></li>
+            <li><a href="https://github.com/islamshahil/AutonomousThreatSweep/tree/main/APT41_ColunmTK">APT41_ColunmTK</a></li>
+            <li><a href="https://github.com/islamshahil/AutonomousThreatSweep/tree/main/APT_FIN7_Malware">APT_FIN7_Malware</a></li>
+          </ul>
+        </div>
       </div>
     {% endunless %}
   {% endfor %}
